@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { SearchSpotifyArtists } from "./components/SeachSpotify/SearchSpotifyArtists";
 import { GridSpotifyArtists } from "./components/SpotifyArtists/GridSpotifyArtists";
+
+import './index.css';
+
 export const SpotifyApp = () => {
   const [artistas, setArtistas] = useState([]);
+
+
 
   return (
     <div className="spotify-app">

@@ -28,7 +28,7 @@ export const SearchSpotifyArtists = ({setArtistas}) => {
           type="text"
           value={value}
           onChange={setValueHandler}
-          placeholder="Busca cualquier Artista"
+          placeholder="Search any Artist"
         />
       </form>
     </div>
