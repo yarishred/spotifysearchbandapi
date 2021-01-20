@@ -3,7 +3,11 @@ import axios from "axios";
 import { SpotifyCredentials } from "../../helpers/SpotifyCredentials";
 import { SpotifyBandItem } from "../SpotifyBandItem/SpotifyBandItem";
 
-export const GridSpotifyArtists = ({artista}) => {
+
+// CSS
+import './GridSpotifyArtists.css'
+
+export const GridSpotifyArtists = ({ artista }) => {
   const [imagenes, setImagenes] = useState([]);
   //Crear el token de spotify
   const spotifyCredentials = SpotifyCredentials();
@@ -55,14 +59,15 @@ export const GridSpotifyArtists = ({artista}) => {
     };
     getArtists();
   }, [artista, client_id, client_secret]);
-  
 
   return (
-    <div>
-      <h2>Artista que contiene la palabra : {artista}</h2>
-      {imagenes.map((img) => {
-        return <SpotifyBandItem key={img.id} {...img} />;
-      })}
-    </div>
+    <>
+      <h2 className="artist-grid">Artists with the keyword: {artista}</h2>
+      <div className="artists-container">
+        {imagenes.map((img) => {
+          return <SpotifyBandItem key={img.id} {...img} />;
+        })}
+      </div>
+    </>
   );
 };

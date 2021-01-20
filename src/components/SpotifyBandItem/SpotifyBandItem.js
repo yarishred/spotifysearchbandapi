@@ -1,11 +1,13 @@
 import React from "react";
 
+import './SpotifyBandItem.css'
+
 export const SpotifyBandItem = ({ images, band }) => {
   const myimages = images.image;
   console.log(myimages);
 
   return (
-    <div>
+    <div className="card">
       <h1>{band}</h1>
       {myimages.map((img, index) => {
         

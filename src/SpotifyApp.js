@@ -5,7 +5,7 @@ export const SpotifyApp = () => {
   const [artistas, setArtistas] = useState([]);
 
   return (
-    <div>
+    <div className="spotify-app">
       <h1>Spotify Input App</h1>
 
       <SearchSpotifyArtists setArtistas={setArtistas} />

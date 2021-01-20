@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import './SearchSpotifyArtists.css'
+
 export const SearchSpotifyArtists = ({setArtistas}) => {
   const [value, setValue] = useState('');
 
@@ -19,16 +21,16 @@ export const SearchSpotifyArtists = ({setArtistas}) => {
   
 
   return (
-    <>
+    <div className="spotify-form" >
       <h2>Search Something</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={value}
           onChange={setValueHandler}
-          placeholder="Search Anything..."
+          placeholder="Busca cualquier Artista"
         />
       </form>
-    </>
+    </div>
   );
 };

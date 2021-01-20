@@ -1,0 +1,18 @@
+.artists-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.artist-grid{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+    text-align: center
+}
